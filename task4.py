@@ -38,13 +38,13 @@ class Matrix:
         return s
 
     def __add__(self, lst1):
-        result = list()
+        result = Matrix()
 
         for i in range(len(self.lst)):
             tmp = []
             for j in range(len(self.lst[i])):
-                tmp.append(self.lst[i][j] + lst1[i][j])
-            result.append(tmp)
+                tmp.append(self.lst[i][j] + lst1.lst[i][j])
+            result.lst.append(tmp)
 
         return result
 
